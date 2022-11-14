@@ -1,0 +1,593 @@
+@charset "UTF-8";
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap')
+	;
+
+/* 공통 */
+* {
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	text-decoration: none;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-style: normal;
+	font-size: 14px;
+	box-sizing: border-box;
+	border: none;
+	list-style: none;
+}
+
+body {
+	height: 1500px;
+	background: #f2f2f2;
+}
+
+/* 헤더 */
+.header {
+	position: fixed;
+	width: 100%;
+	height: 84px;
+	background: #02735E;
+	z-index: 1002;
+}
+
+.headerregion {
+	width: 1180px;
+	height: 84px;
+	margin: 0 auto;
+}
+
+.headerregion .logo {
+	width: 125px;
+	height: 84px;
+	padding: auto;
+	margin-left: 0px;
+	padding: 27px 0px;
+	float: left;
+}
+
+.headerregion .logo a {
+	width: 125px;
+	font-weight: 700;
+	line-height: 30px;
+	font-size: 18px;
+	color: #F2F2F2;
+	text-decoration: none;
+}
+
+.headerregion .logo img {
+	width: 18px;
+	height: 18px;
+}
+
+.nav_header {
+	float: left;
+	margin-left: 50px;
+}
+
+.nav_sector {
+	float: left;
+	margin-right: 32px;
+}
+
+.nav_sector a {
+	line-height: 84px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	color: #F2F2F2;
+}
+
+.nav_sector a:hover {
+	color: #d2d2d2;
+}
+
+.headerregion .chatAndLogout {
+	width: 310px;
+	height: 84px;
+	margin-right: 0px;
+	float: right;
+	margin-right: 0px;
+	padding: 17px 0px;
+}
+
+.headerregion .chatAndLogout a {
+	display: block;
+	width: 125px;
+	height: 50px;
+	background: #F2F2F2;
+	font-weight: 400;
+	font-size: 15px;
+	color: #02735E;
+	text-decoration: none;
+	margin-left: 30px;
+	float: right;
+	text-align: center;
+	line-height: 50px;
+	transition: all 0.5s ease-in-out;
+}
+
+.headerregion .chatAndLogout a:hover {
+	background: black;
+	color: #f2f2f2;
+}
+
+.frame {
+	position: relative;
+	width: 1180px;
+	height: 1167px;
+	top: 200px;
+}
+
+#searchBar {
+	box-sizing: border-box;
+	padding: 10px;
+	position: absolute;
+	width: 553px;
+	height: 50px;
+	left: 241px;
+	top: 0px;
+	border: 3px solid #02735E;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 29px;
+	display: flex;
+	align-items: center;
+	text-transform: capitalize;
+	background-color: #f2f2f2;
+}
+
+input:focus {
+	outline: none;
+}
+
+input::placeholder {
+	color: #A3BFAF;
+}
+
+.searchBtn {
+	position: absolute;
+	width: 125px;
+	height: 50px;
+	left: 815px;
+	top: 0px;
+	background: #D95F5F;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 22px;
+	/* identical to box height */
+	text-align: center;
+	text-transform: capitalize;
+	color: #F2F2F2;
+	transition: background 0.5s ease-in-out;
+}
+
+.searchBtn:hover {
+	background: black;
+	cursor: pointer;
+}
+
+.seoulChart {
+	position: absolute;
+	width: 570px;
+	height: 325px;
+	left: 0px;
+	top: 49px;
+	transition: background 0.5s ease-in-out;
+}
+
+.koreaChart {
+	position: absolute;
+	width: 570px;
+	height: 325px;
+	left: 0px;
+	top: 49px;
+	transition: background 0.5s ease-in-out;
+}
+
+.chart {
+	position: absolute;
+	width: 570px;
+	height: 462px;
+	left: 0px;
+	top: 205px;
+	/* 	background: #f2f2f2; */
+}
+
+.chartTitle {
+	position: absolute;
+	width: 352px;
+	height: 29px;
+	left: 0px;
+	top: 10px;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 29px;
+	/* identical to box height */
+	display: flex;
+	align-items: center;
+	text-align: center;
+	text-transform: capitalize;
+	color: #D95F5F;
+}
+
+.seoulChartLabel {
+	position: absolute;
+	width: 570px;
+	height: 29px;
+	left: 0px;
+	top: 384px;
+}
+
+svg .municipality {
+	fill: #A3BFAF;
+	stroke: #f2f2f2;
+}
+
+svg .municipality:hover {
+	fill: #02735E;
+	stroke: #f2f2f2;
+}
+
+/* svg .municipality-label {
+  fill: black;
+  font-size: 12px;
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 300;
+  text-anchor: middle;
+} */
+#seoulLogo {
+	width: 18.56px;
+	height: 20px;
+	left: 0px;
+	top: 5px;
+}
+
+#seoulLogoLabel {
+	position: absolute;
+	width: 541px;
+	height: 29px;
+	left: 29px;
+	top: 0px;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 29px;
+	/* identical to box height */
+	display: flex;
+	align-items: center;
+	text-transform: capitalize;
+	color: #02735E;
+	transition: background 0.5s ease-in-out;
+}
+
+#seoulLogoLabel:hover {
+	color: black;
+}
+
+.koreaChartLabel {
+	position: absolute;
+	width: 574px;
+	height: 29px;
+	left: -4px;
+	top: 423px;
+}
+
+#koreaLogo {
+	width: 27.74px;
+	height: 27.74px;
+	left: 0px;
+	top: 1px;
+}
+
+#koreaLogoLabel {
+	position: absolute;
+	width: 541px;
+	height: 29px;
+	left: 33px;
+	top: 0px;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 29px;
+	/* identical to box height */
+	display: flex;
+	align-items: center;
+	text-transform: capitalize;
+	color: #02735E;
+	transition: background 0.5s ease-in-out;
+}
+
+#koreaLogoLabel:hover {
+	color: black;
+}
+
+.mapArea {
+	position: absolute;
+	width: 570px;
+	height: 462px;
+	left: 610px;
+	top: 205px;
+}
+
+#map {
+	position: absolute;
+	width: 570px;
+	height: 325px;
+	left: 0px;
+	top: 49px;
+}
+
+.geolocationSend {
+	position: absolute;
+	width: 134px;
+	height: 29px;
+	left: 436px;
+	top: 10px;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 29px;
+	/* identical to box height */
+	display: flex;
+	align-items: center;
+	text-align: right;
+	text-transform: capitalize;
+	color: #02735E;
+	transition: background 0.5s ease-in-out;
+}
+
+.geolocationSend:hover {
+	color: black;
+}
+
+.mapTitle {
+	position: absolute;
+	width: 369px;
+	height: 29px;
+	left: 0px;
+	top: 10px;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 29px;
+	/* identical to box height */
+	display: flex;
+	align-items: center;
+	text-align: center;
+	text-transform: capitalize;
+	color: #D95F5F;
+}
+
+.closestHospitalLabel {
+	position: absolute;
+	width: 138px;
+	height: 29px;
+	left: 0px;
+	top: 384px;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 29px;
+	/* identical to box height */
+	display: flex;
+	align-items: center;
+	text-transform: capitalize;
+	color: #02735E;
+}
+
+.closestHospital {
+	position: absolute;
+	width: 366px;
+	height: 29px;
+	left: 204px;
+	top: 384px;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 29px;
+	/* identical to box height */
+	/* display: flex; */
+	align-items: center;
+	text-align: right;
+	text-transform: capitalize;
+	color: #A3BFAF;
+}
+
+.nextHospitalLabel {
+	position: absolute;
+	width: 175px;
+	height: 29px;
+	left: 0px;
+	top: 423px;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 29px;
+	/* identical to box height */
+	display: flex;
+	align-items: center;
+	text-align: center;
+	text-transform: capitalize;
+	color: #02735E;
+}
+
+.nextHospital {
+	position: absolute;
+	width: 366px;
+	height: 29px;
+	left: 204px;
+	top: 423px;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 29px;
+	/* identical to box height */
+	/* display: flex; */
+	align-items: center;
+	text-align: right;
+	text-transform: capitalize;
+	color: #A3BFAF;
+}
+
+.closestHname1 {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 29px;
+	/* identical to box height */
+	/* display: flex; */
+	align-items: center;
+	text-align: right;
+	text-transform: capitalize;
+	color: #A3BFAF;
+	transition: background 0.5s ease-in-out;
+}
+
+.closestHname2 {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 29px;
+	/* identical to box height */
+	/* display: flex; */
+	align-items: center;
+	text-align: right;
+	text-transform: capitalize;
+	color: #A3BFAF;
+	transition: background 0.5s ease-in-out;
+}
+
+.hospitalDistance {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 29px;
+	/* identical to box height */
+	/* display: flex; */
+	align-items: center;
+	text-align: right;
+	text-transform: capitalize;
+	color: #A3BFAF;
+	transition: background 0.5s ease-in-out;
+}
+
+.closestHname1:hover {
+	color: black;
+}
+
+.closestHname2:hover {
+	color: black;
+}
+
+.mainSwiper {
+	position: absolute;
+	width: 1180px;
+	height: 450px;
+	left: 0px;
+	top: 717px;
+	display: flex;
+}
+
+.userchat {
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	background-color: #D95F5F;
+	color: #f2f2f2;
+	text-align: center;
+	line-height: 100px;
+	position: fixed;
+	bottom: 100px;
+	right: 100px;
+	z-index:10;
+	
+	transition: background 0.5s ease-in-out;
+}
+
+.userchat:hover {
+	background-color: black;
+}
+
+.footer {
+	margin-top: 300px;
+	width: 100%;
+	height: 230px;
+	background: #02735E;
+	display: flex;
+}
+
+.footerregion {
+	width: 1180px;
+	height: 164px;
+	margin: auto;
+	display: flex;
+}
+
+.footer_left {
+	flex: 5;
+}
+
+.fnav_sector {
+	display: inline;
+	margin-right: 32px;
+}
+
+.fnav_sector a {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	color: #F2F2F2;
+}
+
+.fnav_sector a:hover {
+	color: #d2d2d2;
+}
+
+.footer_info {
+	margin-top: 28px;
+}
+
+.info_sector {
+	margin-top: 8px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	color: #F2F2F2;
+}
+
+.footer_right {
+	flex: 1;
+}
+
+.flogo {
+	text-align: right;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	color: #F2F2F2;
+}
+
+.flogo img {
+	height: 18px;
+	width: 18px;
+}

@@ -1,0 +1,361 @@
+@charset "UTF-8";
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap')
+	;
+/* 공통 */
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-family: 'Noto Sans KR'; font-style : normal;
+	box-sizing: border-box;
+	font-size: 15px;
+	font-style: normal;
+}
+body{
+
+background: #F2F2F2;
+}
+
+input::placeholder {
+	font-weight: 500;
+	font-size: 14px;
+}
+
+/* 헤더 */
+.header {
+	width: 100%;
+	height: 84px;
+	background: #02735E;
+}
+
+.header .container {
+	width: 1180px;
+	height: 84px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.header .container .logo {
+	width: 130px;
+	height: 30px;
+	padding: 27px 0;
+}
+
+.header .container .logo a {
+	width: 104px;
+	margin-right: 1px;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 30px;
+	color: #F2F2F2;
+}
+
+.header .container .logo img {
+	width: 18px;
+	height: 18px;
+}
+
+.header .container .pagego {
+	font-size: 15px;
+	position: relative;
+	left: 150px;
+	bottom: 25px;
+}
+
+.header .container .pagego a {
+	padding-left: 35px;
+	color: #F2F2F2;
+}
+
+.header .container .login {
+	position: absolute;
+	right: 0;
+	top: 17px;
+}
+
+.header .login a {
+	display: inline-block;
+	width: 125px;
+	background: #F2F2F2;
+	font-weight: 400;
+	font-size: 15px;
+	color: #02735E;
+	text-align: center;
+	line-height: 50px;
+	margin-left: 20px;
+}
+
+/* 회원가입 */
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 2px;
+  width: 280px;
+  height: 88px;
+}
+
+.title p {
+  width: 118px;
+  height: 46px;
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 46px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #02735e;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin-bottom:50px;
+}
+
+.titletwo {
+  width: 397px;
+  height: 60px;
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #a3bfaf;
+  margin-bottom:50px;
+}
+/* form  */
+
+/* 실명을 입력해주세요 */
+.username1 {
+  width: 280px;
+  height: 50px;
+  margin-bottom:10px;
+}
+#uname {
+  width: 276px;
+  height: 36px;
+  border: 3px solid #02735e;
+  padding: 0 5px;
+  display: flex;
+  line-height: 20px;
+  align-items: center;
+  text-transform: capitalize;
+  
+}
+
+input::placeholder {
+  color: #a3bfaf;
+  font-style: normal;
+}
+
+/* 이메일 입력해주세요 */
+
+.useremail {
+  width: 390px;
+  height: 50px;
+   margin-bottom:10px;
+}
+
+#uid {
+  width: 276px;
+  height: 36px;
+  border: 3px solid #02735e;
+  padding: 0 5px;
+}
+
+/* 중복확인 버튼 */
+.useremailButton {
+  width: 85px;
+  height: 33px;
+  margin-left: 20px;
+  color: #f2f2f2;
+  background: #d95f5f;
+  border: none;
+  
+}
+
+/* 비밀번호 입력 */
+
+.userpwd {
+  width: 280px;
+  height: 50px;
+  margin-bottom:10px;
+}
+#upw {
+  width: 276px;
+  height: 36px;
+  border: 3px solid #02735e;
+  padding: 0 5px;
+}
+
+/* 비밀번호 중복입력 */
+.userpwd2 {
+  width: 280px;
+  height: 50px;
+  margin-bottom:10px;
+}
+
+/* 휴대폰번호 입력 */
+.userpnum {
+  width: 390px;
+  height: 50px;
+  margin-bottom:10px;
+}
+#utel {
+  width: 276px;
+  height: 36px;
+  border: 3px solid #02735e;
+  padding: 0 5px;
+}
+
+/* 실명인증 버튼 */
+
+.userpnumButton {
+  width: 85px;
+  height: 33px;
+  margin-left: 20px;
+  color: #f2f2f2;
+  background: #d95f5f;
+  border: none;
+}
+
+#upwcheck {
+  width: 276px;
+  height: 36px;
+  border: 3px solid #02735e;
+  padding: 0 5px;
+}
+
+/* 약관 내용 */
+.textbox{
+  display: flex;
+  flex-direction: column;
+}
+.text {
+  width: 397px;
+  height: 177px;
+}
+
+.text2 {
+  border: 3px solid #02735e;
+  padding: 0 5px;
+}
+
+/* 약관동의  */
+
+.checkbox {
+  width: 236.41px;
+  height: 23px;
+  margin : 50px 0px 0px 210px;
+  
+  
+}
+#chek {
+  width: 15.34px;
+  height: 15.34px;
+  accent-color: #d95f5f;
+  border-radius: 3.06759px;
+  margin-left: 5px;
+}
+
+/* 회원가입 완료 버튼 */
+.button-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 32px;
+  gap: 10px;
+
+  
+ 
+}
+#btn1 {
+  width: 280px;
+  height: 50px;
+  color: #f2f2f2;
+  background: #d95f5f;
+  border: none;
+  margin-top:20px;
+   
+}
+
+
+
+
+/* footer */
+.footer {
+	position: absolute;
+	width: 100%;
+	height: 230px;
+	background: #02735E;
+	color: #F2F2F2;
+	padding: 45px 0;
+	top: 1155px;
+}
+
+
+
+.footer .container3 {
+	width: 1180px;
+	height: 84px;
+	margin: 0 auto;
+}
+
+.footer .logo {
+	width: 150px;
+	height: 57px;
+	float: right;
+}
+
+.footer .logo a {
+	width: 150px;
+	color: #F2F2F2;
+}
+
+.footer .logo img {
+	width: 18px;
+	height: 18px;
+}
+
+.footer .logo span {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 30px;
+}
+
+.footer .link {
+	width: 600px;
+}
+
+.footer .link a {
+	font-size: 15px;
+	line-height: 22px;
+	color: #F2F2F2;
+	padding-right: 32px;
+}
+
+.footer .link a:hover {
+	color: #d2d2d2;
+}
+
+.footer .etcInfo {
+	margin-top: 25px;
+	line-height: 25px;
+	font-size: 15px;
+}

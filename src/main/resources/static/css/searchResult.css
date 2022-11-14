@@ -1,0 +1,425 @@
+@charset "UTF-8";
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap')
+	;
+
+/* 공통 */
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-size: 14px;
+	box-sizing: border-box;
+	border: none;
+	list-style: none;
+}
+
+button, input[type="button"], input[type="submit"] {
+	cursor: pointer;
+}
+
+button:hover, input[type="button"]:hover, input[type="submit"]:hover {
+	background-color: #000;
+}
+
+input::placeholder {
+	font-weight: 500;
+	font-size: 16px;
+	color: #A3BFAF;
+}
+
+/* 헤더 */
+.header {
+	width: 100%;
+	height: 84px;
+	background: #02735E;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+
+.header .container {
+	width: 1180px;
+	height: 84px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.header .container .logo {
+	width: 130px;
+	height: 30px;
+	padding: 27px 0;
+}
+
+.header .container .logo a {
+	width: 104px;
+	margin-left: 2px;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 30px;
+	color: #F2F2F2;
+}
+
+.header .container .logo img {
+	width: 18px;
+	height: 18px;
+}
+
+.header .container .nav {
+	position: absolute;
+	height: 22px;
+	left: 175px;
+	top: 31px;
+}
+
+.header .container .nav ul {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0px;
+	gap: 32px;
+}
+
+.header .container .nav ul a {
+	font-size: 15px;
+	color: #F2F2F2;
+	text-decoration: none;
+}
+
+.header .container .nav ul a:hover {
+	color: #d2d2d2;
+}
+
+.header .container .chatAndLogout {
+	position: absolute;
+	right: 0;
+	top: 17px;
+}
+
+.header .chatAndLogout a {
+	display: inline-block;
+	width: 125px;
+	background: #F2F2F2;
+	font-weight: 400;
+	font-size: 15px;
+	color: #02735E;
+	text-align: center;
+	line-height: 50px;
+	margin-left: 30px;
+	transition: all 0.5s ease-in-out;
+}
+
+.header .chatAndLogout a:hover {
+	background: #000;
+	color: #f2f2f2;
+}
+
+/* 본문 */
+body {
+	background-color: #f2f2f2;
+}
+
+.content {
+	width: 1180px;
+	margin: 0 auto;
+}
+
+.content .searchDiv {
+	width: 710px;
+	margin: 190px auto 155px;
+}
+
+.searchDiv input[type='text'] {
+	width: 553px;
+	height: 50px;
+	border: 3px solid #02735E;
+	padding-left: 10px;
+	background: #f2f2f2;
+	font-weight: 500;
+	font-size: 20px;
+}
+
+.searchDiv input[value='검색'] {
+	width: 125px;
+	height: 50px;
+	background: #D95F5F;
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 50px;
+	text-align: center;
+	color: #F2F2F2;
+	margin-left: 27px;
+	vertical-align: top;
+	transition: all 0.5s ease-in-out;
+}
+
+.searchDiv input[value='검색']:hover{
+	background: #000;
+}
+
+.content .sideAndListDiv {
+	position: relative;
+	width: 100%;
+	height: 1095px;
+}
+
+.sideAndListDiv .sidebar {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.sideAndListDiv .listDiv {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.sidebar .mapDiv {
+	width: 340px;
+	height: 394px;
+}
+
+.mapDiv span, .filterDiv>span {
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 35px;
+	color: #D95F5F;
+}
+
+.filterDiv>input {
+	width: 85px;
+	height: 33px;
+	background: #A3BFAF;
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 33px;
+	text-align: center;
+	color: #F2F2F2;
+	float: right;
+	transition: all 0.5s ease-in-out;
+}
+
+.mapDiv #map {
+	width: 340px;
+	height: 325px;
+	background-color: #000;
+	margin-top: 26px;
+}
+
+.sidebar .filterDiv {
+	margin-top: 63px;
+}
+
+.filterDiv .checkboxDiv {
+	margin-top: 25px;
+	height: 400px;
+	overflow: auto;
+}
+
+.checkboxDiv input {
+	margin-bottom: 21px;
+	width: 16px;
+	height: 16px;
+	margin-left: 15px;
+}
+
+.checkboxDiv span {
+	padding-left: 22px;
+	font-size: 20px;
+	line-height: 29px;
+	color: #02735E;
+}
+
+.checkboxDiv hr {
+	background-color: #dadada;
+	height: 1px;
+	width: 300px;
+	margin-bottom: 10px;
+}
+
+.sideAndListDiv .listDiv {
+	width: 840px;
+	padding-left: 26px;
+}
+
+.sideAndListDiv .listDiv .desc {
+	margin-bottom: 29px;
+}
+
+.sideAndListDiv .listDiv .desc ul {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 44px;
+}
+
+.listDiv .desc ul li img {
+	width: 25px;
+	height: 25px;
+	vertical-align: bottom;
+}
+
+.listDiv .desc ul li span {
+	font-weight: 700;
+	font-size: 20px;
+	vertical-align: top;
+	color: #02735E;
+	padding-left: 15px;
+}
+
+.listDiv .list {
+	width: 340px;
+	height: 220px;
+	background-color: #A3BFAF;
+	padding: 25px;
+	display: inline-block;
+	margin: 0 0 61px 65px;
+	text-align: left;
+}
+
+.listDiv .list:hover {
+	cursor: pointer;
+	background-color: rgb(124, 165, 141);
+}
+
+.list .top .hospitalName {
+	display: inline-block;
+	width: 290px;
+	height: 35px;
+	overflow: hidden;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 35px;
+	color: #02735E;
+}
+
+.list .top ul {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 12px;
+	padding-top: 10px;
+}
+
+.list .bottom {
+	padding-top: 10px;
+}
+
+.list .bottom p {
+	font-size: 15px;
+	line-height: 30px;
+	color: #F2F2F2;
+}
+
+.list .bottom>p:nth-child(1) {
+	width: 290px;
+	height: 30px;
+	overflow: hidden;
+}
+
+/* 페이징 */
+.paginationDiv {
+	width: 100%;
+	height: 99px;
+	padding-left: 64px;
+	margin: 16px auto 0;
+}
+
+.paginationDiv ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 8px;
+	height: 32px;
+	width: 500px;
+	margin: 0 auto;
+}
+
+.paginationDiv li.currentPage {
+	color: #D95F5F;
+	border: 1px solid #D95F5F;
+}
+
+.paginationDiv li {
+	width: 32px;
+	text-align: center;
+	line-height: 32px;
+	border-radius: 3px;
+	background-color: #F2F2F2;
+	border: 1px solid #DFE3E8;
+}
+
+.paginationDiv li a {
+	text-decoration: none;
+	font-family: 'SF Pro Text';
+	font-weight: 700;
+	color: #212B36;
+}
+
+.paginationDiv li:hover {
+	cursor: pointer;
+}
+
+/* footer */
+.footer {
+	width: 100%;
+	height: 230px;
+	background: #02735E;
+	color: #F2F2F2;
+	padding: 45px 0;
+}
+
+.footer .container {
+	width: 1180px;
+	height: 84px;
+	margin: 0 auto;
+}
+
+.footer .logo {
+	width: 150px;
+	height: 57px;
+	float: right;
+}
+
+.footer .logo a {
+	width: 150px;
+	color: #F2F2F2;
+}
+
+.footer .logo img {
+	width: 18px;
+	height: 18px;
+}
+
+.footer .logo span {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 30px;
+}
+
+.footer .link {
+	width: 600px;
+}
+
+.footer .link a {
+	font-size: 15px;
+	line-height: 22px;
+	color: #F2F2F2;
+	padding-right: 32px;
+}
+
+.footer .link a:hover {
+	color: #d2d2d2;
+}
+
+.footer .etcInfo {
+	margin-top: 25px;
+	line-height: 25px;
+	font-size: 15px;
+}

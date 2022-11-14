@@ -1,0 +1,493 @@
+@charset "UTF-8";
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap')
+	;
+/* 공통 */
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	box-sizing: border-box;
+	font-size: 15px;
+	font-style: normal;
+}
+
+input::placeholder {
+	color: #a3bfaf;
+	font-style: normal;
+}
+
+body {
+	background: #F2F2F2;
+}
+
+input::placeholder {
+	font-weight: 500;
+	font-size: 14px;
+}
+
+/* 헤더 */
+.header {
+	width: 100%;
+	height: 84px;
+	background: #02735E;
+}
+
+.header .container {
+	width: 1180px;
+	height: 84px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.header .container .logo {
+	width: 130px;
+	height: 30px;
+	padding: 27px 0;
+}
+
+.header .container .logo a {
+	width: 104px;
+	margin-right: 1px;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 30px;
+	color: #F2F2F2;
+}
+
+.header .container .logo img {
+	width: 18px;
+	height: 18px;
+}
+
+.header .container .pagego {
+	position: relative;
+	left: 135px;
+	bottom: 25px;
+}
+
+.header .container .pagego a {
+	padding-left: 35px;
+	color: #F2F2F2;
+}
+
+.header .container .pagego a:hover {
+	color: #d2d2d2;
+}
+
+.main .login img {
+	position: absolute;
+	width: 700px;
+	height: 1075px;
+	left: 370px;
+	top: 84px;
+}
+
+.main {
+	display: flex; /*옆으로오게 기본값  */
+	justify-content: center; /*수평센터  */
+	align-items: center; /*수직센터  */
+}
+
+/* 로그인이미지  */
+.imgbox {
+	z-index: -1;
+	height: 856px;
+	
+}
+
+.imgbox img {
+	width: 700px;
+	height: 100%;
+	left: 0px;
+	top: 84px;
+	object-fit: fill;
+}
+
+.formbox {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 480px;
+	height: 856px;
+}
+
+.loginLogo {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.loginLogo img {
+	width: 30px;
+	height: 30px;
+	border-radius: 1px;
+}
+
+.main .loginLogo span {
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 46px;
+	color: #02735E;
+}
+
+/*일반 병원 선택 css  */
+.radiobox {
+	display: flex;
+	width: 219px;
+	height: 20px;
+}
+
+.btn-group {
+	margin-left: 45px;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-size: 20px;
+	line-height: 23px;
+	display: flex;
+	align-items: center;
+	text-transform: capitalize;
+	font-weight: bold;
+	color: #02735E;
+}
+
+.btnradiocheck {
+	padding-left: 10px;
+	padding-bottom: 2px;
+}
+
+.btn-grouptwo {
+	margin-left: 30px;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-size: 16px;
+	line-height: 23px;
+	display: flex;
+	align-items: center;
+	text-transform: capitalize;
+	font-weight: bold;
+	color: #02735E;
+}
+
+.btn-check {
+	width: 17px;
+	height: 17px;
+}
+
+/*아이디입력  */
+.useremail {
+	height: 40px;
+}
+
+#useruid {
+	width: 280px;
+	height: 50px;
+	border: 3px solid #02735e;
+	background-color: #f2f2f2;
+	padding: 0 10px;
+	
+	transition: all 0.2s ease-in-out;
+}
+
+#useruid:focus {
+	outline: none;
+  	border: 3px solid #D95F5F;
+}
+
+#useruid:focus::placeholder {
+	color: #D95F5F;
+}
+
+/*비번입력  */
+.userpw {
+	height: 30px;
+}
+
+#userupw {
+	width: 280px;
+	height: 50px;
+	border: 3px solid #02735e;
+	background-color: #f2f2f2;
+	padding: 0 10px;
+	
+	transition: all 0.2s ease-in-out;
+}
+
+#userupw:focus {
+	outline: none;
+  	border: 3px solid #D95F5F;
+}
+
+#userupw:focus::placeholder {
+	color: #D95F5F;
+}
+
+/*로그인버튼  */
+#btn1 {
+	width: 276px;
+	height: 50px;
+	color: #f2f2f2;
+	background: #d95f5f;
+	border: none;
+	font-weight: bold;
+	margin-top: 30px;
+	transition: all 0.5s ease-in-out;
+}
+
+#btn1:hover {
+	cursor: pointer;
+	background: black;
+}
+
+/*카카오로그인  */
+.kakao {
+	width: 276px;
+	height: 50px;
+	border: none;
+	background: #FEE500;
+	font-weight: bold;
+	margin-top: 15px;
+}
+/* 네이버로그인 */
+.naver {
+	width: 276px;
+	height: 50px;
+	border: none;
+	font-weight: bold;
+	color: #f2f2f2;
+	background: #03C75A;
+	margin-top: 15px;
+}
+/*회원가입,비번찾기 폰트  */
+.textfont {
+	margin-top: 10px;
+	color: #D95F5F;
+	font-size: 16px;
+	line-height: 23px;
+	font-weight: bold;
+	cursor: pointer;
+	
+	transition: all 0.5s ease-in-out;
+}
+
+.textfont:hover {
+	color: black;
+}
+
+.textfonttwo {
+	color: #D95F5F;
+	font-size: 16px;
+	line-height: 23px;
+	font-weight: bold;
+	
+	transition: all 0.5s ease-in-out;
+}
+
+.textfonttwo:hover {
+	color: black;
+}
+
+/*비밀번호찾기 모델창  */
+input[id*="popup"] {
+	display: none;
+}
+
+input[id*="popup"]+label {
+	display: inline-block;
+	padding: 10px;
+}
+
+input[id*="popup"]+label+div {
+	position: fixed; /* 브라우저에 고정하는위치값*/
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100; /* posithion의 우선순의값*/
+}
+
+input[id*="popup"]+label+div>div {
+	position: absolute; /* 상위요소가 위치값으로 fixed 를가지고있어서 이요소기준으로 이동*/
+	top: 50%; /* 위로부터*/
+	left: 50%; /* 아래로부터*/
+	transform: translate(-50%, -50%);
+	/* 정확하게 가운데 지점에 위치하기위해 자신을기준으로 x밀고,y당기도록함*/
+	width: 500px;
+	height: 500px;
+	background-color: #f2f2f2;
+	z-index: 2; /* posithion의 우선순의값 102 가아니라 100안에 2*/
+}
+
+input[id*="popup"]+label+div>div>label {
+	position: absolute;
+	top: 0%;
+	right: 0%;
+	width: 18px;
+	height: 18px;
+	transform: translate(-180%, 185%);
+	z-index: 1;	
+	cursor: pointer;
+}
+
+input[id*="popup"]+label+div>label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1;
+}
+
+input[id*="popup"]+label+div {
+	display: none;
+}
+
+input[id*="popup"]:checked+label+div {
+	display: block;
+}
+
+.modal-header>h5 {
+	width: 500px;
+	height: 84px;
+	background: #02735E;
+	color: #F2F2F2;
+	text-align: center;
+	font-size: 20px;
+	line-height: 84px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.modaltitle {
+	width: 500px;
+	height: 45px;
+	font-weight: 700;
+	text-align: center;
+	color: #02735E;
+	margin-top: 25px;
+}
+
+.modaltitle p {
+	font-size: 24px;
+	line-height: 35px;
+}
+
+.modallist {
+	width: 500px;
+	height: 85px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 30px;
+	margin-left: 75px;
+	margin-top: 20px;
+	color: #A3BFAF;
+}
+
+.modaltel {
+	margin-top: 50px;
+	margin-left: 50px;
+}
+
+#utel {
+	width: 276px;
+	height: 50px;
+	border: 3px solid #02735e;
+	padding: 0 5px;
+	background-color: #f2f2f2;
+}
+
+.userpnumButton {
+	width: 100px;
+	height: 50px;
+	margin-left: 20px;
+	color: #F2F2F2;
+	background: #d95f5f;
+	border: none;
+	cursor:pointer;
+}
+
+.modalemail {
+	margin-top: 25px;
+	margin-left: 50px;
+}
+
+#uid {
+	width: 276px;
+	height: 50px;
+	border: 3px solid #02735e;
+	padding: 0 5px;
+	background-color: #f2f2f2;
+}
+
+.useremailButton {
+	width: 100px;
+	height: 50px;
+	margin-left: 20px;
+	color: #F2F2F2;
+	background: #d95f5f;
+	border: none;
+	cursor:pointer;
+}
+
+/* footer */
+.footer {
+	position: absolute;
+	width: 100%;
+	height: 230px;
+	background: #02735E;
+	color: #F2F2F2;
+	padding: 45px 0;
+}
+
+.footer .container3 {
+	width: 1180px;
+	height: 84px;
+	margin: 0 auto;
+}
+
+.footer .logo {
+	width: 150px;
+	height: 57px;
+	float: right;
+}
+
+.footer .logo a {
+	width: 150px;
+	color: #F2F2F2;
+}
+
+.footer .logo img {
+	width: 18px;
+	height: 18px;
+}
+
+.footer .logo span {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 30px;
+}
+
+.footer .link {
+	width: 600px;
+}
+
+.footer .link a {
+	font-size: 15px;
+	line-height: 22px;
+	color: #F2F2F2;
+	padding-right: 32px;
+}
+
+.footer .link a:hover {
+	color: #d2d2d2;
+}
+
+.footer .etcInfo {
+	margin-top: 25px;
+	line-height: 25px;
+	font-size: 15px;
+}

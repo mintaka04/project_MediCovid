@@ -1,0 +1,331 @@
+@charset "UTF-8";
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap')
+	;
+
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	background: #F2F2F2;
+}
+
+* {
+	text-decoration: none;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+button:hover, input[type='button']:hover {
+	cursor: pointer;
+}
+
+/*navbar부분*/
+.header {
+	width: 100%;
+	height: 84px;
+	background: #02735E;
+}
+
+.headerregion {
+	width: 1180px;
+	height: 84px;
+	margin: 0 auto;
+}
+
+.headerregion .logo {
+	width: 125px;
+	height: 30px;
+	padding: auto;
+	margin-left: 0px;
+	padding: 27px 0px;
+	float: left;
+}
+
+.headerregion .logo a {
+	width: 125px;
+	font-weight: 700;
+	line-height: 30px;
+	font-size: 18px;
+	color: #F2F2F2;
+	text-decoration: none;
+}
+
+.headerregion .logo img {
+	width: 18px;
+	height: 18px;
+}
+
+.headerregion .chatAndLogout {
+	width: 310px;
+	height: 84px;
+	margin-right: 0px;
+	float: right;
+	margin-right: 0px;
+	padding: 17px 0px;
+}
+
+.headerregion .chatAndLogout a {
+	display: block;
+	width: 125px;
+	height: 50px;
+	background: #F2F2F2;
+	font-weight: 400;
+	font-size: 15px;
+	color: #02735E;
+	text-decoration: none;
+	margin-left: 30px;
+	float: right;
+	text-align: center;
+	line-height: 50px;
+	transition: background 0.5s ease-in-out;
+}
+
+.headerregion .chatAndLogout a:hover {
+	background: black;
+	color: #f2f2f2;
+}
+
+/*내용*/
+.content {
+	width: 1180px;
+	margin: 0 auto;
+	padding: 35px 0;
+}
+
+/*일일 예약 관리 제목+버튼부분*/
+.name1AndButtons {
+	height: 35px;
+}
+
+.name1 {
+	float: left;
+	font-weight: 700;
+	color: #D95F5F;
+	font-size: 24px;
+	line-height: 35px;
+	font-style: normal;
+	text-transform: capitalize;
+	margin-bottom: 24px;
+}
+
+.daysButtons, .radiobtn {
+	float: right;
+	line-height: 35px;
+}
+
+.btns {
+	float: left;
+	width: 85px;
+	height: 33px;
+	background: #A3BFAF;
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 22px;
+	color: #F2F2F2;
+	border: 0px;
+	transition: background 0.5s ease-in-out;
+}
+
+#btnafter {
+	background: #D95F5F;
+	transition: background 0.5s ease-in-out;
+}
+
+#btnafter:hover {
+	background: black;
+}
+
+.btns:hover {
+	background: black;
+}
+
+#ddate {
+	float: left;
+	width: 93px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 32px;
+	color: #02735E;
+	text-align: center;
+}
+
+/*일일예약관리 표부분*/
+.datelistresult, .pastlistresult {
+	margin-top: 24px;
+	width: 100%;
+	height: 360px;
+}
+
+.table1, .table2 {
+	width: 1180px;
+	height: 360px;
+	display: block;
+	overflow: scroll;
+	overflow-x: hidden;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+#tb1 {
+	margin-bottom: 60px;
+}
+
+th {
+	height: 40px;
+	background: #A3BFAF;
+	font-size: 14px;
+	font-weight: 700;
+	text-align: center;
+	line-height: 18px;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+}
+
+#th_b {
+	min-width: 94.4px;
+}
+
+td {
+	height: 40px;
+	width: 196.67px;
+	border-bottom: 1px solid #A3BFAF;
+	border-left: 1px solid #A3BFAF;
+}
+
+.td_1, .td_2, .td_3, .td_4, .td_5 {
+	padding: 0 10px;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+.td_6 {
+	text-align: center;
+}
+
+.td2_1, .td2_2, .td2_3, .td2_4, .td2_5, .td2_6 {
+	padding: 0 10px;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+.last_td {
+	border-right: 1px solid #A3BFAF;
+}
+
+.visitconf {
+	text-align: center;
+	border: 0;
+	color: #F2F2F2;
+	background: #A3BFAF;
+	width: 80px;
+	height: 30px;
+	font-weight: 700;
+	font-size: 15px;
+	transition: background 0.5s ease-in-out;
+}
+
+.visitconf:hover {
+	background: #d95f5f;
+}
+
+/*밑의 글자*/
+.bottom_btm {
+	margin-top: 90px;
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 20px;
+}
+
+.bottom_text {
+	flex: 3;
+	color: #A3BFAF;
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 33px;
+}
+
+.bottom_btn {
+	flex: 2;
+	text-align: right;
+}
+
+.bottom_btn input {
+	background: #A3BFAF;
+	width: 120px;
+	height: 33px;
+	border: 0;
+	color: #F2F2F2;
+	font-weight: 700;
+	font-size: 15px;
+	margin-left: 19px;
+	transition: background 0.5s ease-in-out;
+}
+
+.bottom_btn input:hover {
+	background: #d95f5f;
+}
+
+/*footer 부분*/
+.footer {
+	width: 100%;
+	height: 230px;
+	background: #02735E;
+	display: flex;
+}
+
+.footerregion {
+	width: 1180px;
+	height: 164px;
+	margin: auto;
+	display: flex;
+}
+
+.footer_left {
+	flex: 5;
+}
+
+.fnav_sector {
+	display: inline;
+	margin-right: 32px;
+}
+
+.fnav_sector a {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	color: #F2F2F2;
+}
+
+.fnav_sector a:hover {
+	color: #d2d2d2;
+}
+
+.footer_info {
+	margin-top: 28px;
+}
+
+.info_sector {
+	margin-top: 8px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	color: #F2F2F2;
+}
+
+.footer_right {
+	flex: 1;
+}
+
+.flogo {
+	text-align: right;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	color: #F2F2F2;
+}
+
+.flogo img {
+	height: 18px;
+	width: 18px;
+}

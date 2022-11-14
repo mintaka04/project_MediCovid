@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap')
+	;
+
+/* 공통 */
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-size: 14px;
+	font-weight: 400;
+	box-sizing: border-box;
+	border: none;
+	list-style: none;
+}
+
+input::placeholder {
+	font-weight: 500;
+	font-size: 20px;
+	color: #A3BFAF;
+}
+
+/* 본문 */
+.modal {
+	width: 500px;
+	height: 100vh;
+	max-height: 700px;
+	background-color: #F2F2F2;
+}
+
+.modal-header {
+	width: 500px;
+	height: 84px;
+	background: #02735E;
+	position: relative;
+}
+
+.modal-header>h5 {
+	width: 126px;
+	height: 84px;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 84px;
+	color: #F2F2F2;
+	margin: 0 auto;
+}
+
+.modal-body {
+	height: calc(100% - 84px);
+}
+
+.chatHeader {
+	height: 51px;
+	border-bottom: 1px solid #A3BFAF;
+}
+
+.chatHeader>div:first-child {
+	float: left;
+	width: 25px;
+	height: 25px;
+	padding: 13px 0 0 25px;
+}
+
+.chatHeader div img {
+	width: 25px;
+	height: 25px;
+}
+
+.chatHeader>div:nth-child(2) {
+	margin-left: 75px;
+	width: 160px;
+	height: 20px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 23px;
+	padding: 14px 0 7px;
+}
+
+.chatBody {
+	height: calc(100% - 105px);
+	overflow-y: auto;
+	padding: 5px 34px 29px;
+}
+
+.chatBody .received {
+	padding-top: 24px;
+}
+
+.chatBody .received .msg {
+	display: inline-block;
+	padding: 14px;
+	margin-right: 10px;
+	max-width: 260px;
+	word-break: break-all;
+	background-color: #A3BFAF;
+}
+
+.chatBody .received .msgTime {
+	vertical-align: bottom;
+}
+
+.chatBody>.received.bot2 {
+	padding-top: 14px;
+}
+
+.chatBody .bot2 input {
+	width: 229px;
+	height: 31px;
+	background: #F2F2F2;
+	font-size: 15px;
+	color: #02735E;
+	cursor: pointer;
+}
+
+.chatBody .bot2 input:hover {
+	color: #D95F5F;
+}
+
+.chatBody .bot2>span>input[type=button]:nth-child(3) {
+	margin: 14px 0;
+}
+
+.chatBody .bot2 input:disabled {
+	background-color: #dadada;
+	color: #c1c1c1;
+}
+
+.chatBody .bot2>span>input:disabled:hover {
+	color: #c1c1c1;
+	cursor: default;
+}
+
+.chatBody .sent {
+	padding-top: 24px;
+	text-align: right;
+}
+
+.chatBody .sent .msg {
+	display: inline-block;
+	padding: 14px;
+	margin-left: 10px;
+	max-width: 260px;
+	word-break: break-all;
+	background-color: #D95F5F;
+}
+
+.chatBody .sent .msgTime {
+	vertical-align: bottom;
+}
+
+.chatFooter {
+	height: 54px;
+	border-top: 1px solid #A3BFAF;
+}
+
+.chatFooter input {
+	width: 100%;
+	height: 100%;
+	background-color: #f2f2f2;
+	padding-left: 10px;
+	font-weight: 500;
+	font-size: 20px;
+}

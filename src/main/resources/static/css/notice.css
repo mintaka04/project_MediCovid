@@ -1,0 +1,388 @@
+@charset "UTF-8";
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap')
+	;
+
+/* 공통 */
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-size: 14px;
+	font-weight: 400;
+	box-sizing: border-box;
+	border: none;
+	list-style: none;
+}
+
+input::placeholder {
+	font-weight: 500;
+	font-size: 14px;
+	color: #A3BFAF;
+}
+
+/* 헤더 */
+.header {
+	width: 100%;
+	height: 84px;
+	background: #02735E;
+}
+
+.header .container {
+	width: 1180px;
+	height: 84px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.header .container .logo {
+	width: 130px;
+	height: 30px;
+	padding: 27px 0;
+	margin: 0 auto;
+}
+
+.header .container .logo a {
+	width: 104px;
+	margin-left: 2px;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 30px;
+	color: #F2F2F2;
+}
+
+.header .container .logo img {
+	width: 18px;
+	height: 18px;
+}
+
+/* 본문 */
+body {
+	background-color: #F2F2F2;
+}
+
+.content {
+	width: 1002px;
+	margin: 50px auto;
+}
+
+.content h3 {
+	width: 118px;
+	height: 46px;
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 46px;
+	color: #02735E;
+	margin: 57px auto 8px;
+}
+
+.content div {
+	width: 876px;
+	height: 33px;
+	margin: 0 auto;
+	text-align: right;
+}
+
+.content div .writeBtn {
+	width: 85px;
+	height: 33px;
+	line-height: 33px;
+	background: #D95F5F;
+	text-align: center;
+	font-weight: 700;
+	font-size: 15px;
+	color: #F2F2F2;
+}
+
+.content div input:hover {
+	cursor: pointer;
+	box-shadow: 0 0 5px #bbb;
+}
+
+table, tr, th, td {
+	border: 1px solid #A3BFAF;
+}
+
+table {
+	width: 876px;
+	background: #F2F2F2;
+	border-collapse: collapse;
+	margin: 16px auto 57px;
+}
+
+tr {
+	height: 40px;
+	background: #F2F2F2;
+}
+
+tr:hover {
+	cursor: pointer;
+	color: #D95F5F;
+}
+
+tr:nth-child(1):hover {
+	cursor: default;
+	color: #000;
+}
+
+th {
+	width: 219px;
+	height: 40px;
+	background: #A3BFAF;
+	font-weight: 700;
+	line-height: 18px;
+	text-align: left;
+}
+
+th, td {
+	padding: 10px;
+}
+
+/* 페이징 */
+.paginationDiv {
+	width: 1002px;
+	height: 99px;
+	margin: 0 auto;
+}
+
+.paginationDiv ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 8px;
+	height: 32px;
+	width: 500px;
+	margin: 0 auto;
+}
+
+.paginationDiv li.currentPage {
+	color: #D95F5F;
+	border: 1px solid #D95F5F;
+}
+
+.paginationDiv li {
+	width: 32px;
+	text-align: center;
+	line-height: 32px;
+	border-radius: 3px;
+	background-color: #F2F2F2;
+	border: 1px solid #DFE3E8;
+}
+
+.paginationDiv li a {
+	text-decoration: none;
+	font-family: 'SF Pro Text';
+	font-weight: 700;
+	color: #212B36;
+}
+
+.paginationDiv li:hover {
+	cursor: pointer;
+}
+
+/* 모달 */
+.block {
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	position: absolute;
+	top:0;
+	left:0;
+	background-color: rgba(0, 0, 0, 0.73);
+	z-index: 50;
+}
+
+.modal {
+	display: none;
+	width: 500px;
+	height: 680px;
+	background: #F2F2F2;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 100;
+	box-shadow: 0 0 10px #aaa;
+}
+
+.modal-header>h5 {
+	width: 500px;
+	height: 84px;
+	background: #02735E;
+	color: #F2F2F2;
+	text-align: center;
+	font-size: 20px;
+	line-height: 84px;
+}
+
+.modal-body {
+	padding: 40px 65px;
+	height: 450px;
+	overflow: hidden;
+}
+
+.modal-body>h5 {
+	font-weight: 700;
+	font-size: 32px;
+	color: #02735E;
+	margin: 6px auto 30px;
+	text-align: center;
+}
+
+.titleDiv span {
+	display: inline-block;
+	width: 86px;
+	height: 29px;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 29px;
+	color: #02735E;
+}
+
+.titleDiv input {
+	width: 280px;
+	height: 50px;
+	border: 3px solid #02735E;
+	font-weight: 500;
+	padding-left: 5px;
+	background-color: #f2f2f2;
+}
+
+.titleDiv .titleDisable {
+	border: none;
+}
+
+.contentDiv {
+	margin: 28px auto 0;
+	width: 370px;
+	height: 250px;
+	border: 3px solid #02735E;
+}
+
+.contentDiv textarea {
+	width: 100%;
+	height: 100%;
+	border: none;
+	background-color: #F2F2F2;
+	resize: none;
+	font-weight: 500;
+	line-height: 30px;
+	padding: 5px;
+}
+
+.modal-footer {
+	width: 280px;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+
+.modal-footer input {
+	width: 280px;
+	height: 50px;
+	background: #A3BFAF;
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 50px;
+	text-align: center;
+	color: #F2F2F2;
+}
+
+.modal-footer input:hover {
+	box-shadow: 0 0 5px #bbb;
+	cursor: pointer;
+}
+
+.modal-footer .editOkBtn, .modal-footer .deleteOkBtn {
+	width: 130px;
+	height: 50px;
+	background: #A3BFAF;
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 50px;
+	text-align: center;
+	color: #F2F2F2;
+}
+
+.modal-footer .editOkBtn {
+	background: #D95F5F;
+	margin-left: 16px;
+}
+
+#closeBtn {
+	position: absolute;
+	top: 20px;
+	right: 33px;
+	font-size: 30px;
+	background-color: #02735E;
+}
+
+#closeBtn img {
+	width: 18px;
+	height: 18px;
+}
+
+#closeBtn:hover {
+	cursor: pointer;
+}
+
+/* footer */
+.footer {
+	width: 100%;
+	height: 230px;
+	background: #02735E;
+	color: #F2F2F2;
+	padding: 45px 0;
+}
+
+.footer .container {
+	width: 1180px;
+	height: 84px;
+	margin: 0 auto;
+}
+
+.footer .logo {
+	width: 150px;
+	height: 57px;
+	float: right;
+}
+
+.footer .logo a {
+	width: 150px;
+	color: #F2F2F2;
+}
+
+.footer .logo img {
+	width: 18px;
+	height: 18px;
+}
+
+.footer .logo span {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 30px;
+}
+
+.footer .link {
+	width: 600px;
+}
+
+.footer .link a {
+	font-size: 15px;
+	line-height: 22px;
+	color: #F2F2F2;
+	padding-right: 32px;
+}
+
+.footer .link a:hover {
+	color: #d2d2d2;
+}
+
+.footer .etcInfo {
+	margin-top: 25px;
+	line-height: 25px;
+	font-size: 15px;
+}

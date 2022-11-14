@@ -1,0 +1,968 @@
+@charset "UTF-8";
+
+/* 공통 */
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-size: 14px;
+	box-sizing: border-box;
+	border: none;
+	list-style: none;
+}
+
+button, input[type="button"], input[type="submit"] {
+	cursor: pointer;
+}
+
+/* 헤더 */
+.header {
+	width: 100%;
+	height: 84px;
+	background: #02735E;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+
+.header .container {
+	width: 1180px;
+	height: 84px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.header .logo {
+	width: 130px;
+	height: 30px;
+	padding: 27px 0;
+}
+
+.header .logo a {
+	width: 104px;
+	height: 29px;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 29px;
+	/* identical to box height */
+	display: flex;
+	align-items: center;
+	text-transform: capitalize;
+	color: #F2F2F2;
+	/* Inside auto layout */
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+}
+
+.header .logo img {
+	width: 18px;
+	height: 18px;
+}
+
+.header .chatAndLogout {
+	position: absolute;
+	right: 10px;
+	top: 17px;
+}
+
+.header .chatAndLogout a, .header .chatAndLogout div {
+	display: inline-block;
+	width: 125px;
+	background: #F2F2F2;
+	font-weight: 400;
+	font-size: 15px;
+	color: #02735E;
+	text-align: center;
+	line-height: 50px;
+	margin-left: 20px;
+	cursor: pointer;
+	transition: background 0.5s ease-in-out;
+}
+
+.chatAndLogout a:hover, .chatAndLogout div:hover {
+	background: black;
+	color: #f2f2f2;
+}
+
+/* 본문 */
+.content {
+	width: 1180px;
+	margin: 0 auto;
+	height: 1007px;
+	overflow-y: auto;
+}
+
+#ingres, #passedres {
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	vertical-align: top;
+}
+
+.check {
+	margin-top: 11px;
+}
+
+/* .ing_a {
+	color: #A3BFAF;
+} */
+body>div.content>div.reservation>div.IngReservation>a.clicked {
+	color: #D95F5F;
+}
+
+/* .non-click {
+	color: A3BFAF;
+} */
+.content .reservation {
+	width: 500px;
+	height: 83px;
+	margin-top: 118px;
+}
+
+.content .reservation .IngReservation {
+	display: inline-block;
+	width: 201px;
+	height: 35px;
+	margin-right: 35px;
+}
+
+.content .reservation .IngReservation a {
+	width: 201px;
+	height: 35px;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 35px;
+	transition: background 0.5s ease-in-out;
+}
+
+.content .reservation .IngReservation a:hover {
+	color: black;
+}
+
+.content .reservation .PassedReservation {
+	display: inline-block;
+	width: 250px;
+	height: 35px;
+}
+
+.content .reservation .PassedReservation a {
+	width: 250px;
+	height: 35px;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 35px;
+	color: #A3BFAF;
+	transition: background 0.5s ease-in-out;
+}
+
+.content .reservation .PassedReservation a:hover {
+	color: black;
+}
+
+.content .inghospitalinfo {
+	position: relative;
+	width: 1180px;
+	height: 268px;
+	left: -10px;
+	top: 37px;
+	margin: 0px 0px 40px 0px;
+}
+
+.content .inghospitalinfo .mapapi {
+	position: absolute;
+	width: 270px;
+	height: 270px;
+	left: 0px;
+	top: 0px;
+}
+
+.hospitalname {
+	width: 300px;
+	height: 150px;
+}
+
+.content .inghospitalinfo .hospitalname>p {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0px;
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 46px;
+	gap: 2px;
+	position: absolute;
+	color: #D95F5F;
+	width: 479px;
+	height: 67px;
+	left: 331px;
+	top: 3px;
+	transition: background 0.5s ease-in-out;
+}
+
+.content .inghospitalinfo .hospitalname p:hover {
+	color: black;
+}
+
+.content .inghospitalinfo .inquiry .btn1 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 14px 10px;
+	font-size: 21px;
+	gap: 10px;
+	position: absolute;
+	width: 120px;
+	height: 33px;
+	left: 1000px;
+	top: 27px;
+	background: #A3BFAF;
+	gap: 10px;
+	color: #F2F2F2;
+	transition: background 0.5s ease-in-out;
+}
+
+.content .inghospitalinfo .inquiry .btn1:hover {
+	background: black;
+	color: #f2f2f2;
+}
+
+.content .inghospitalinfo .inquiry .btn2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 14px 10px;
+	font-size: 21px;
+	gap: 10px;
+	position: absolute;
+	width: 120px;
+	height: 33px;
+	left: 1000px;
+	top: 80px;
+	background: #A3BFAF;
+	color: #F2F2F2;
+	transition: background 0.5s ease-in-out;
+}
+
+.content .inghospitalinfo .inquiry .btn2:hover {
+	background: black;
+	color: #f2f2f2;
+}
+
+.content .inghospitalinfo .inquiry .btn3 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 14px 10px;
+	font-size: 21px;
+	gap: 10px;
+	position: absolute;
+	width: 120px;
+	height: 33px;
+	left: 1000px;
+	top: 80px;
+	background: #A3BFAF;
+	color: #F2F2F2;
+	transition: background 0.5s ease-in-out;
+}
+
+.content .inghospitalinfo .inquiry .btn3:hover {
+	background: black;
+	color: #f2f2f2;
+}
+
+.content .inghospitalinfo .hospitalinfo {
+	position: absolute;
+	width: 440px;
+	height: 129px;
+	left: 333px;
+	top: 131px;
+}
+
+.content .inghospitalinfo .hospitalinfo .hospitaladdr>p {
+	position: absolute;
+	width: 550px;
+	height: 29px;
+	left: 0px;
+	top: 12px;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 29px;
+	/* identical to box height */
+	display: flex;
+	align-items: center;
+	text-transform: capitalize;
+	color: #02735E;
+}
+
+.content .inghospitalinfo .hospitalinfo .reservationno>p {
+	position: absolute;
+	width: 439px;
+	height: 29px;
+	left: 0px;
+	top: 50px;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 29px;
+	/* identical to box height */
+	display: flex;
+	align-items: center;
+	text-transform: capitalize;
+	color: #02735E;
+}
+
+.content .inghospitalinfo .hospitalinfo .reservationdate>p {
+	position: absolute;
+	width: 439px;
+	height: 29px;
+	left: 0px;
+	top: 88px;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 29px;
+	/* identical to box height */
+	display: flex;
+	align-items: center;
+	text-transform: capitalize;
+	color: #02735E;
+}
+
+.content .inghospitalinfo .icon {
+	position: absolute;
+	width: 150px;
+	height: 40px;
+	left: 1000px;
+	top: 101px;
+}
+
+.content .inghospitalinfo .icon .icon1 {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 0px;
+	top: 100px;
+}
+
+.content .inghospitalinfo .icon .icon2 {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 45px;
+	top: 100px;
+}
+
+.content .inghospitalinfo .icon .icon3 {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 90px;
+	top: 100px;
+}
+
+.moresee {
+	width: 161px;
+	height: 35px;
+	margin-top: 80px;
+	margin-left: 505px;
+	transition: background 0.5s ease-in-out;
+}
+
+.moresee #downside {
+	width: 63px;
+	height: 26px;
+	margin-top: 10px;
+}
+
+.moresee #downside:hover {
+	color: black;
+}
+
+label[for="see"] {
+	top: -4px;
+	left: 13px;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 35px;
+	margin-left: 8px;
+	position: relative;
+	font-size: 25px;
+	line-height: 35px;
+	color: #02735E;
+	transition: background 0.5s ease-in-out;
+}
+
+label[for="see"]:hover {
+	color: black;
+}
+
+/*모달 css*/
+.back_modal {
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 3;
+	top: 0;
+	left: 0;
+}
+
+.back_modal2 {
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 3;
+	top: 0;
+	left: 0;
+	position: fixed;
+}
+
+.rev_modal {
+	display: none;
+	width: 500px;
+	height: 800px;
+	z-index: 50;
+	top: 3%;
+	left: 30%;
+	position: fixed;
+	background: #F2F2F2;
+}
+
+.rev_modal2 {
+	display: none;
+	width: 500px;
+	height: 800px;
+	z-index: 50;
+	top: 3%;
+	left: 30%;
+	position: fixed;
+	background: #F2F2F2;
+}
+
+.mini_navbar {
+	background: #02735E;
+	width: 500px;
+	height: 84px;
+}
+
+.minibar_logo {
+	width: 124px;
+	height: 29px;
+	left: 188px;
+	top: 28px;
+	position: absolute;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 19px;
+	line-height: 29px;
+	color: #F2F2F2;
+}
+
+#minibar_img {
+	width: 18px;
+	height: 18px;
+}
+
+.minibar_close a {
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	right: 33px;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 19px;
+	line-height: 84px;
+	color: #F2F2F2;
+}
+
+.mini_title {
+	color: #02735E;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 164px;
+	height: 147px;
+	text-align: center;
+}
+
+.mini_title2 {
+	color: #02735E;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 164px;
+	height: 147px;
+	text-align: center;
+}
+
+.hospital_name {
+	color: #D95F5F;
+	width: 370px;
+	height: 29px;
+	font-size: 25px;
+	font-weight: 700;
+	top: 222px;
+	font-weight: 700;
+	margin-left: 64px;
+	text-align: center;
+}
+
+.passedreservation_info {
+	width: 261px;
+	height: 129px;
+	margin-left: 93px;
+	margin-top: 54px;
+}
+
+.hospital_addr {
+	width: 326px;
+	color: #02735E;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 23px;
+	color: #02735E;
+}
+
+.reservation_no {
+	width: 261px;
+	height: 23px;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 23px;
+	color: #02735E;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.star_point {
+	width: 402px;
+	height: 164px;
+	margin-top: 30px;
+	margin-left: 95px;
+}
+
+.doctor_point {
+	color: #02735E;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 23px;
+}
+
+.star1 {
+	display: inline;
+	width: 102px;
+	height: 18px;
+	margin-left: 12px;
+}
+
+.star2 {
+	display: inline;
+	width: 102px;
+	height: 18px;
+	margin-left: 39px;
+}
+
+.star3 {
+	display: inline;
+	width: 102px;
+	height: 18px;
+	margin-left: 32px;
+}
+
+.star4 {
+	display: inline;
+	width: 102px;
+	height: 18px;
+	margin-left: 19px;
+}
+
+.nurse_point {
+	color: #02735E;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 23px;
+	margin-top: 19px;
+}
+
+.facilities_point {
+	color: #02735E;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 23px;
+	margin-top: 21px;
+}
+
+.wait_point {
+	color: #02735E;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 23px;
+	margin-top: 21px;
+}
+
+.review_button {
+	width: 280px;
+	height: 50px;
+	padding: 14px 32px;
+	gap: 10px;
+	margin-left: 100px;
+	margin-top: 38px;
+}
+
+.review_button #button3 {
+	width: 344px;
+	height: 47px;
+	font-weight: 700;
+	font-size: 23px;
+	line-height: 22px;
+	margin-left: -52px;
+	background: #D95F5F;
+	color: #F2F2F2;
+	transition: background 0.5s ease-in-out;
+}
+
+.review_button #button3:hover {
+	background: black;
+	color: #f2f2f2;
+}
+
+label[for="userid"] {
+	top: -1px;
+	left: 5px;
+	font-size: 20px;
+	position: relative;
+}
+
+label[for="rno"] {
+	top: -1px;
+	left: 5px;
+	font-size: 20px;
+	position: relative;
+}
+
+label[for="rdate"] {
+	top: -1px;
+	left: 5px;
+	font-size: 20px;
+	position: relative;
+}
+
+.reservation_date {
+	width: 320px;
+	height: 23px;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 23px;
+	color: #02735E;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.id {
+	margin-left: 65px;
+	margin-right: 65px;
+	height: 50px;
+	font-style: normal;
+	color: #02735E;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+#p1 {
+	width: 500px;
+}
+
+#userid {
+	margin-left: 65px;
+	margin-right: 65px;
+	height: 50px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	color: #A3BFAF;
+}
+
+.notice {
+	margin-left: 65px;
+	margin-right: 65px;
+	height: 50px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	color: #A3BFAF;
+}
+
+.userinfo {
+	width: 500px;
+	height: 326px;
+}
+
+.user_info1 {
+	margin-top: 10px;
+	margin-bottom: 31px;
+	margin-left: 65px;
+	margin-right: 65px;
+	height: 50px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	color: #A3BFAF;
+	border: 5px solid #02735E;
+}
+
+.user_info1 #existedPw {
+	width: 360px;
+	height: 40px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	color: #A3BFAF;
+}
+
+.user_info2 {
+	margin-top: 15px;
+	margin-bottom: 33px;
+	margin-left: 65px;
+	margin-right: 65px;
+	height: 50px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	color: #A3BFAF;
+	border: 5px solid #02735E;
+}
+
+.user_info2 #newPw {
+	width: 360px;
+	height: 40px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	color: #A3BFAF;
+}
+
+.user_info3 {
+	margin-top: 15px;
+	margin-bottom: 32px;
+	margin-left: 65px;
+	margin-right: 65px;
+	height: 50px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	color: #A3BFAF;
+	border: 5px solid #02735E;
+}
+
+.user_info3 #newPw2 {
+	width: 360px;
+	height: 40px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	color: #A3BFAF;
+}
+
+.user_info3 #checkPw {
+	width: 360px;
+	height: 40px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	color: #A3BFAF;
+}
+
+.user_info4 {
+	margin-top: 15px;
+	margin-bottom: 20px;
+	margin-left: 65px;
+	margin-right: 65px;
+	height: 50px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	color: #A3BFAF;
+	border: 5px solid #02735E;
+}
+
+.user_info4 #newPhone {
+	width: 360px;
+	height: 40px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	color: #A3BFAF;
+}
+
+input::placeholder {
+	color: #A3BFAF;
+}
+
+label {
+	color: #A3BFAF;
+}
+
+.drop_button {
+	display: inline;
+	width: 130px;
+	height: 50px;
+	margin-left: 9px;
+	margin-top: 52px;
+}
+
+.drop_button #button1 {
+	width: 130px;
+	height: 50px;
+	background: #A3BFAF;
+	color: #F2F2F2;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 22px;
+	/* identical to box height */
+	text-align: center;
+	text-transform: capitalize;
+	margin-top: 4px;
+	margin-left: 98px;
+	transition: background 0.5s ease-in-out;
+}
+
+.drop_button #button1:hover {
+	background: black;
+	color: #f2f2f2;
+}
+
+.drop_button #button2 {
+	width: 130px;
+	height: 50px;
+	background: #A3BFAF;
+	color: #F2F2F2;
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 22px;
+	/* identical to box height */
+	text-align: center;
+	text-transform: capitalize;
+	background: #D95F5F;
+	margin-left: 20px;
+	transition: background 0.5s ease-in-out;
+}
+
+.drop_button #button2:hover {
+	background: black;
+	color: #f2f2f2;
+}
+
+.mini_revNum {
+	margin-left: 65px;
+	margin-right: 65px;
+	height: 50px;
+	color: #A3BFAF;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.mini_permember {
+	height: 50px;
+	margin-top: 36px;
+	margin-left: 65px;
+	margin-right: 65px;
+}
+
+.min_pmem_title {
+	color: #02735E;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+p {
+	color: #F2F2F2;
+}
+/* footer */
+.footer {
+	width: 100%;
+	height: 230px;
+	background: #02735E;
+	color: #F2F2F2;
+	padding: 45px 0;
+}
+
+.footer .container {
+	width: 1180px;
+	height: 84px;
+	margin: 0 auto;
+}
+
+.footer .logo {
+	width: 150px;
+	height: 57px;
+	float: right;
+}
+
+.footer .logo a {
+	width: 150px;
+	color: #F2F2F2;
+}
+
+.footer .logo img {
+	width: 18px;
+	height: 18px;
+}
+
+.footer .logo span {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 30px;
+}
+
+.footer .link {
+	width: 600px;
+}
+
+.footer .link a {
+	font-size: 15px;
+	line-height: 22px;
+	color: #F2F2F2;
+	padding-right: 32px;
+}
+
+.footer .link a:hover {
+	color: #d2d2d2;
+}
+
+.footer .etcInfo {
+	margin-top: 25px;
+	line-height: 25px;
+	font-size: 15px;
+}
