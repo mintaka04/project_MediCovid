@@ -1,7 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!-- appkey 추가위한 시도 -->
+<!-- appkey 추가위해 사용 -->
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <!DOCTYPE html>
 <html>
@@ -10,8 +9,7 @@
 <title>병원 상세 페이지</title>
 <link rel="stylesheet" href="/css/hospitalDetail.css" />
 <!-- swiper css -->
-<link rel="stylesheet"
-	href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 <script type="text/javascript"
 	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=<spring:eval expression="@environment.getProperty('hospitaldetail.appkey')" />">
 </script>

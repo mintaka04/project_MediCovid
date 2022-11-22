@@ -11,9 +11,11 @@ import kr.co.medicovid.dto.HospitalInfoDTO;
 
 public interface HosDetailDAO {
 
+	//해당 병원 정보 가져오기
 	@Select("SELECT * FROM hospitalInfo WHERE hno = #{hno}")
 	HospitalInfoDTO selectHospital(int hno);
 	
+	//해당 병원 카테고리번호 전부 가져오기(여러개 분류도 존재)
 	@Select("SELECT ccategory FROM hospitalCategory WHERE hno = #{hno}")
 	List<Integer> getCategory(int hno);
 	
