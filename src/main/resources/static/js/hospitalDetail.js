@@ -1,3 +1,4 @@
+//시간 출력을 보기좋게 하기 위함
 window.onload=function(){
 	var tt = document.getElementById('hitime').innerText;
 	var time = tt.substring(0, 2) + ":" + tt.substring(2,4)+" ~ "+tt.substring(4,6)+":"+tt.substring(6,8);
@@ -6,18 +7,23 @@ window.onload=function(){
 }
 
 
+/*
+예약하기 버튼 눌렸을때 작동
+로그인 여부에 따라 로그인 화면으로 이동시키거나 예약 모달창을 띄우거나.
+*/
 function makeRev(){
-	console.log("예약하기 버튼 눌림");
-	console.log(document.getElementById('access_right').value);
+	//console.log("예약하기 버튼 눌림");
+	//console.log(document.getElementById('access_right').value);
 	if(document.getElementById('access_right').value == "권한없음"){
-		console.log("로그인페이지로이동")
+		//console.log("로그인페이지로이동")
 		location.href="loginForm";
 	}else{
-		console.log("예약 창 띄우기");
+		//console.log("예약 창 띄우기");
 		document.querySelector('.rev_modal').style.display = 'block';
 		document.querySelector('.back_modal').style.display = 'block';
 	}
 }
+
 
 
 function modalclose(){
@@ -26,11 +32,15 @@ function modalclose(){
 	
 }
 
+
+
+
 function gotoSearch(){
 	var word = document.getElementById('searchinput').value;
-	console.log(word);
+	//console.log(word);
 	location.href="search/hospitals?keyword="+word;
 }
+
 
 
 //지도 관련
@@ -67,7 +77,11 @@ infowindow.open(map, marker);
 
 
 
-
+/*
+	예약 진행 모달 창에서 예약하고 싶은 날짜 클릭시
+	예약 가능한 시간대를 (병원측의 예약 가능 인원수와 현재 예약된 인원수를 비교해서) 나타냄.
+	이 때 모든 예약 가능한 시간대를 나타내지만 예약 불가능한 시간대는 취소선으로 나타내줌.
+*/
 function select_date(obj, htime, hno){
 	//obj : 8월 4일 형태.
 	console.log("날짜 선택됨");
@@ -83,15 +97,15 @@ function select_date(obj, htime, hno){
 		data : {selectedDate : obj, htime : htime, hno:hno},
 		dataType : 'json',
 		success : function(data){
-			console.log("성공");
-			console.log(data.posRvNum);
+			//console.log("성공");
+			//console.log(data.posRvNum);
 
 			for(var i = 0; i < data.posRvNum.length; i++){
 				//console.log("i값입니다 : " + i);
 				//console.log("해당 배열값입니다 : " + data.posRvNum[i]);
 				if(data.posRvNum[i] < 1){
 					//해당 시간대 li값...
-					console.log(document.getElementById(i).innerHTML);
+					//console.log(document.getElementById(i).innerHTML);
 					document.getElementById(i).style.pointerEvents = 'none';		
 					document.getElementById(i).style.textDecoration = 'line-through';		
 				}else{
@@ -101,14 +115,13 @@ function select_date(obj, htime, hno){
 			}
 		},
 		error : function(){
-			console.log("실패..");
+			//console.log("실패..");
 		},
 		complete : function(){
-			console.log("완료");
-			
+			//console.log("완료");		
 		},
 		beforeSend : function(){
-			console.log("이제 보낼거다..")
+			//console.log("이제 보낼거다..")
 		}
 	});
 	
@@ -118,7 +131,11 @@ function select_date(obj, htime, hno){
 
 
 
-//진짜 예약하기
+/*
+	db에 예약생성하는 함수--
+		유효성 검사 후에
+		ajax를 통해 db에 입력.
+*/
 function addResv(hno){
 	//console.log("예약날짜 : "+document.getElementById('dropdown_date').innerHTML);
 	//console.log("예약시간 : "+document.getElementById('dropdown_time').innerHTML);
@@ -151,12 +168,11 @@ function addResv(hno){
 		alert("연락처를 입력해주세요.");
 		return;
 	}else if(!numRegex.test($("#phone_ul").val())){
-		console.log("전 : "+$("#phone_ul").val());
+		//console.log("전 : "+$("#phone_ul").val());
 		alert("전화번호를 형식에 맞춰 입력헤주세요.");
 		return;
-	}
-	
-	console.log("유효성검사 통과!");
+	}	
+	//console.log("유효성검사 통과!");
 	
 	$.ajax({
 		type: 'get',
@@ -182,8 +198,8 @@ function addResv(hno){
 
 
 
+//셀렉트박스	
 $(function(){
-	//셀렉트박스	
 	
 	var _select_title = $("#dropdown_date");	 //변수저장
 	$('<div class="select_icon"></div>').insertAfter(_select_title); //셀렉트박스 세모 아이콘 넣어줄 div

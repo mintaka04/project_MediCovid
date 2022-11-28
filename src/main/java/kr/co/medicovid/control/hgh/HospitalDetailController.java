@@ -137,8 +137,8 @@ public class HospitalDetailController {
 		
 		JSONObject result = new JSONObject();
 		
-		System.out.println("받아온 json input값 : " + selectedDate);
-		System.out.println("컨트롤러 운영시간 :"+htime);
+		//System.out.println("받아온 json input값 : " + selectedDate);
+		//System.out.println("컨트롤러 운영시간 :"+htime);
 		result = rpt.getRevTime(selectedDate, htime, hno);
 		
 		//System.out.println("json값? : " + result.get("posRvNum").toString());

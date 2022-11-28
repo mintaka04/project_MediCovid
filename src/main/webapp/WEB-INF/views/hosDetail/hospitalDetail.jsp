@@ -186,7 +186,10 @@
 					<input type="hidden" id="mapY" value="${hospitalInformation.hy}" />
 					
 				</div>
+				
+				<!-- 지도 api 사용 위해 지도관련 html보다 밑에 위치해야하므로 여기에 위치함!  -->
 				<script type="text/javascript" src="/js/hospitalDetail.js"></script>
+				
 			</div>
 			<div class="pharm">
 				
@@ -225,7 +228,7 @@
 </div>
 
 
-
+<!-- 예약하기 눌렀을 때 로그인 여부 판단해 다음 동작 하기 위함(js의 makeRev에서 사용) -->
 <input type="hidden" name="" id="access_right" value="${model }" />
 
 
