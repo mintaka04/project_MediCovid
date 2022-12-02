@@ -51,6 +51,8 @@ function confirm(id, date, time, hno){
 		//console.log("성공!");
 		//버튼 바꿔주기. -> 간단해서 여기다 이미지태그랑 인원수만 넣어주면 될것 같은데.
 		document.getElementById(id).innerHTML = "<img class='timg' src='../images/user.png' alt='' />"+selNum+"명";
+		document.querySelector('.rev_modal').style.display = 'none';
+		document.querySelector('.back_modal').style.display = 'none';
 	},
 	error : function(request, status, error){
 		console.log("실패..");

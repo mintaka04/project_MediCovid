@@ -37,7 +37,7 @@ function check_newpw(){
 	var in1 = document.getElementById('newpw').value;
 	var in2 = document.getElementById('newpwcheck').value;
 	if(in1 == in2){
-		document.getElementById('pwcheck').innerText ="일치";
+		//document.getElementById('pwcheck').innerText ="일치";
 	}else{
 		document.getElementById('pwcheck').innerText ="일치하지 않습니다";		
 	}
