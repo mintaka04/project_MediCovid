@@ -162,20 +162,20 @@ public class HospitalDetailController {
 		//System.out.println("rtime : " + rtime);		
 		
 		
-		//rdate 8월 1일 -> 2022-08-11
+		//rdate 8월 11일 -> 2022-08-11
 		String month = rdate.split("월")[0];	
-		System.out.println(month);
+		System.out.println("월 : " + month);
 		if(month.length()==1) {
 			month = "0"+month;
 		}
 		int length = rdate.length();
-		String day = ""+Integer.parseInt(rdate.split("월")[0].split("일")[0].trim());
-		System.out.println(day);
+		String day = ""+Integer.parseInt(rdate.split("월")[1].split("일")[0].trim());
+		System.out.println("일 : "+day);
 		if(day.length()==1) {
 			day = "0"+day;
 		}	
 		rdate = LocalDate.now().getYear()+"-"+month+"-"+day;
-		//System.out.println("rdate : " + rdate);
+		System.out.println("rdate : " + rdate);
 		
 		
 		//세션에 저장된 회원번호

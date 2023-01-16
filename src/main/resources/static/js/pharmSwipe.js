@@ -24,6 +24,6 @@ var swiper = new Swiper(".mySwiper", {
 function moveToMap(px, py){
 	console.log("눌림 : " + px +", "+py);
 
-	var ret = window.open("/pharmMap?py="+py+"&px="+px, "_blank", "width=800,height=600");
+	var ret = window.open("/pharmMap?py="+py+"&px="+px, "_blank", "width=620,height=470");
 	
 }
